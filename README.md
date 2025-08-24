@@ -1,1 +1,1 @@
-# myzshconfig ─╯
+# myzshconfig
