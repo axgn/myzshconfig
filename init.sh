@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
 
+MODE="global"
+
+if [ "$1" = "--cn" ] || [ "$1" = "-c" ]; then
+    MODE="cn"
+fi
+
 install_nerd_font() {
     FONT_NAME="FiraCode"
-    FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${FONT_NAME}.zip"
+    if [ "$MODE" = "cn" ]; then
+        FONT_URL="https://gh-proxy.org/https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${FONT_NAME}.zip"
+    else
+        FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${FONT_NAME}.zip"
+    fi
     FONT_DIR="$HOME/.local/share/fonts"
 
     echo "==> Installing ${FONT_NAME} Nerd Font..."
@@ -80,8 +90,5 @@ install_nerd_font
 echo "cope configure file"
 cp .zshrc ~/.zshrc
 cp .p10k.zsh ~/.p10k.zsh
-
-echo "[*] 设置 zsh 为默认 shell..."
-chsh -s "$(which zsh)"
 
 echo "[✔] 完成！重新打开终端即可进入 zsh 环境。"
