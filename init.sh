@@ -26,6 +26,7 @@ install_nerd_font() {
 
     # 解压
     echo "Extracting..."
+    sudo apt install -y unzip
     unzip "$tmp_dir/font.zip" -d "$tmp_dir" >/dev/null
 
     # 拷贝字体文件
@@ -33,6 +34,7 @@ install_nerd_font() {
     find "$tmp_dir" -name "*.ttf" -exec cp {} "$FONT_DIR" \;
 
     # 刷新字体缓存
+    sudo apt install -y fontconfig
     echo "Updating font cache..."
     fc-cache -fv >/dev/null
 
