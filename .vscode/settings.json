@@ -1,0 +1,16 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["*.jsonc.*"],
+      "schema": {
+        "allowTrailingCommas": true
+      }
+    }
+  ],
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  }
+}
