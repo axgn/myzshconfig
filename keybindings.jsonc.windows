@@ -1,0 +1,282 @@
+[
+  {
+    "when": "editorFocus",
+    "command": "code-runner.run",
+    "key": "alt+f5",
+  },
+  {
+    "key": "ctrl+alt+/",
+    "command": "-metaGo.addCursorSmart",
+  },
+  {
+    "command": "platformio-ide.build",
+    "when": "pioProjectReady && pioProjectTasksReady && editorFocus",
+    "key": "ctrl+alt+b",
+  },
+  {
+    "when": "pioProjectReady && pioProjectTasksReady",
+    "key": "ctrl+alt+b",
+    "command": "-platformio-ide.build",
+  },
+  {
+    "when": "terminalFocus",
+    "key": "ctrl+alt+i",
+    "command": "-emojisense.quickEmojiTerminal",
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-code-runner.run",
+  },
+  {
+    "command": "workbench.action.terminal.runRecentCommand",
+    "when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled",
+    "key": "ctrl+alt+r",
+  },
+  {
+    "when": "terminalFocus && terminalHasBeenCreated && !accessibilityModeEnabled || terminalFocus && terminalProcessSupported && !accessibilityModeEnabled",
+    "key": "ctrl+alt+r",
+    "command": "-workbench.action.terminal.runRecentCommand",
+  },
+  {
+    "command": "workbench.action.tasks.runTask",
+    "when": "editorTextFocus && !suggestWidgetVisible",
+    "key": "ctrl+alt+space",
+  },
+  {
+    "command": "markdown-image.paste",
+    "key": "ctrl+alt+v",
+    "when": "config.workspaceKeybindings.pasteimage.enabled && editorLangId == 'markdown' || config.workspaceKeybindings.pasteimage.enabled && editorLangId == 'mdx' || config.workspaceKeybindings.pasteimage.enabled && resourceExtname == '.ipynb'",
+  },
+  {
+    "when": "editorTextFocus",
+    "key": "ctrl+alt+v",
+    "command": "-hexo.paste",
+  },
+  {
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+    "command": "runCommands",
+    "key": "ctrl+down",
+    "args": {
+      "commands": [
+        "selectNextSuggestion",
+        "selectNextSuggestion",
+        "selectNextSuggestion",
+        "selectNextSuggestion",
+        "selectNextSuggestion",
+      ],
+    },
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen",
+  },
+  {
+    "command": "leaveSnippet",
+    "when": "inSnippetMode && textInputFocus && neovim.mode == insert",
+    "key": "ctrl+e",
+  },
+  {
+    "when": "suggestWidgetVisible && textInputFocus && neovim.mode == insert",
+    "command": "hideSuggestWidget",
+    "key": "ctrl+e",
+  },
+  {
+    "command": "hideCodeActionWidget",
+    "key": "ctrl+e",
+    "when": "codeActionMenuVisible && neovim.mode == insert",
+  },
+  {
+    "when": "inInlineEditsPreviewEditor && neovim.mode == insert",
+    "command": "editor.action.inlineSuggest.hide",
+    "key": "ctrl+e",
+  },
+  {
+    "when": "editorTextFocus && inlineEditIsVisible && neovim.mode == insert || editorTextFocus && inlineSuggestionVisible && neovim.mode == insert",
+    "command": "editor.action.inlineSuggest.hide",
+    "key": "ctrl+e",
+  },
+
+  {
+    "command": "quickInput.hide",
+    "when": "inQuickInput && neovim.mode == insert",
+    "key": "ctrl+e",
+  },
+  {
+    "when": "editorFocus && parameterHintsVisible && neovim.mode == insert",
+    "key": "ctrl+e",
+    "command": "closeParameterHints",
+  },
+  {
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused",
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+  },
+  {
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused",
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+  },
+  {
+    "key": "ctrl+f7",
+    "command": "cmake.build",
+    "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand",
+  },
+  {
+    "when": "editorTextFocus",
+    "key": "ctrl+i",
+    "command": "-emojisense.quickEmoji",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel",
+  },
+  {
+    "when": "editorTextFocus && !suggestWidgetVisible",
+    "key": "ctrl+j ctrl+b",
+    "command": "bookmarks.toggle",
+  },
+  {
+    "when": "editorTextFocus && !suggestWidgetVisible",
+    "key": "ctrl+j ctrl+c",
+    "command": "commands.tree.focus",
+  },
+  {
+    "command": "workbench.action.togglePanel",
+    "key": "ctrl+j ctrl+j",
+    "when": "!suggestWidgetVisible",
+  },
+  {
+    "when": "editorTextFocus && !suggestWidgetVisible",
+    "command": "editor.action.openLink",
+    "key": "ctrl+j ctrl+l",
+  },
+  {
+    "command": "explorer.newFile",
+    "key": "ctrl+j ctrl+n",
+    "when": "!suggestWidgetVisible",
+  },
+  {
+    "command": "github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused && !suggestWidgetVisible",
+    "key": "ctrl+j enter",
+  },
+  {
+    "command": "github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !suggestWidgetVisible",
+    "key": "ctrl+j enter",
+  },
+  {
+    "command": "workbench.action.toggleMaximizedPanel",
+    "key": "ctrl+j m",
+    "when": "(panelAlignment == 'center' || panelPosition != 'bottom' && panelPosition != 'top') && !suggestWidgetVisible",
+  },
+  {
+    "command": "settings.switchToJSON",
+    "when": "inSettingsEditor && !inSettingsJSONEditor",
+    "key": "ctrl+k ctrl+j",
+  },
+  {
+    "command": "workbench.action.openGlobalKeybindingsFile",
+    "when": "inKeybindings",
+    "key": "ctrl+k ctrl+j",
+  },
+  {
+    "when": "textInputFocus",
+    "key": "ctrl+l",
+    "command": "-metaGo.selectLineDown",
+  },
+  {
+    "key": "ctrl+right",
+    "command": "cjkWordHandler.cursorWordEndRight",
+    "when": "!inlineSuggestionVisible && editorTextFocus",
+  },
+  {
+    "when": "editorTextFocus",
+    "key": "ctrl+right",
+    "command": "-cjkWordHandler.cursorWordEndRight",
+  },
+  {
+    "when": "cursorBeforeGhostText && inlineSuggestionVisible && !accessibilityModeEnabled && !editorReadonly",
+    "key": "ctrl+right",
+    "command": "-editor.action.inlineSuggest.acceptNextWord",
+  },
+  {
+    "key": "ctrl+shift+;",
+    "when": "breadcrumbsPossible && breadcrumbsVisible",
+    "command": "-breadcrumbs.focus",
+  },
+  {
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "cursorBeforeGhostText && inlineSuggestionVisible && !accessibilityModeEnabled && !editorReadonly",
+    "key": "ctrl+shift+;",
+  },
+  {
+    "when": "editorTextFocus",
+    "key": "ctrl+shift+\\",
+    "command": "-metaGo.jumpToBracket",
+  },
+  {
+    "when": "viewContainer.workbench.view.extension.azure.enabled",
+    "key": "ctrl+shift+a",
+    "command": "-workbench.view.extension.azure",
+  },
+  {
+    "when": "editorTextFocus",
+    "key": "ctrl+shift+i",
+    "command": "-emojisense.quickEmojitext",
+  },
+  {
+    "when": "viewContainer.workbench.view.extension.thunder-client.enabled",
+    "key": "ctrl+shift+r",
+    "command": "-workbench.view.extension.thunder-client",
+  },
+  {
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+    "key": "ctrl+up",
+    "command": "-selectPrevSuggestion",
+  },
+  {
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion",
+    "command": "runCommands",
+    "key": "ctrl+up",
+    "args": {
+      "commands": [
+        "selectPrevSuggestion",
+        "selectPrevSuggestion",
+        "selectPrevSuggestion",
+        "selectPrevSuggestion",
+        "selectPrevSuggestion",
+      ],
+    },
+  },
+  {
+    "key": "ctrl+v",
+    "when": "!filesExplorerFocus && !terminalFocus && resourceLangId == 'markdown'",
+    "command": "-office.markdown.paste",
+  },
+  {
+    "command": "textPowerTools.removeWhitespaceCharacters",
+    "when": "editorTextFocus && workspaceKeybindings.space.enable",
+    "key": "ctrl+w",
+  },
+  {
+    "key": "f7",
+    "when": "cmake:enableFullFeatureSet && !cmake:hideBuildCommand",
+    "command": "-cmake.build",
+  },
+  {
+    "when": "TongyiLingMa.Chat.active",
+    "key": "shift+alt+v",
+    "command": "-tongyi.generate.comment",
+  },
+  {
+    "key": "shift+alt+v",
+    "when": "editorLangId == 'markdown' || editorLangId == 'mdx' || resourceExtname == '.ipynb'",
+    "command": "-markdown-image.paste",
+  },
+  {
+    "key": "tab",
+    "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'",
+    "command": "-insertNextSuggestion",
+  },
+]
