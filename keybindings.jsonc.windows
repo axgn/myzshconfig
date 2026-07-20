@@ -279,4 +279,24 @@
     "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'",
     "command": "-insertNextSuggestion",
   },
+  {
+    "key": "ctrl+j ctrl+n",
+    "command": "vscode-neovim.restart",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+j ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+  },
+  {
+    "key": "ctrl+k ctrl+t",
+    "command": "-turboConsoleLog.insertConsoleTable",
+    "when": "editorTextFocus",
+  },
+  {
+    "args": "<A-d>",
+    "command": "vscode-neovim.send",
+    "key": "alt+d",
+    "when": "editorFocus && neovim.init",
+  },
 ]
